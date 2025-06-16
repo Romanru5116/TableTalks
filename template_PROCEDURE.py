@@ -12,13 +12,19 @@ pip install psycopg2
         print("Connected to PostgreSQL successfully!")
     except Exception as e:
         print(f"Error connecting to PostgreSQL: {e}")
-      
-        def call_stored_procedure(procedure_name, *args):
-      try:
-          cursor.execute(f"CALL {procedure_name}({', '.join(['%s'] * len(args))});", args)
-          conn.commit()
-          print("Stored procedure executed successfully.")
-      except Exception as e:
-          print(f"Error executing stored procedure: {e}")
+
+CALL add_and_log_user('John Doe', 'john.doe@example.com');
+
+with open("/path/to/my/directory/my_file.txt", "w") as file:
+    save = str(name)
+       file.write(f"Name: {save}\n")
+
+#
+#
+#     try:
+ #         cursor.execute(f"CALL {procedure_name}({', '.join(['%s'] * len(args))});", args)
+  #       print("Stored procedure executed successfully.")
+   #   except Exception as e:
+    #      print(f"Error executing stored procedure: {e}")
     # Example usage
-    --call_stored_procedure("your_procedure_name", "param1_value", 2, "param3_value")
+    #--call_stored_procedure("your_procedure_name", "param1_value", 2, "param3_value")
