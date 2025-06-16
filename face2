@@ -1,0 +1,34 @@
+#non_workit!
+import tkinter as tk
+ 
+def button1_click():
+    #label.config(text="Сервис1_заказан")
+    new_window = tk.Toplevel(root)
+    new_window.title("сервис1")
+    tk.Label(new_window, text="ПАРАМЕТРЫ_СЕРВИСА1").pack()
+    
+def button2_click():
+    new_window = tk.Toplevel(root)
+    --label.config(text="Сервис2_заказан")
+    new_window.title("Сервис2")
+    tk.Label(new_window, text="ПАРАМЕТРЫ_СЕРВИСА2").pack()
+    
+
+root = tk.Tk()
+root.title("заказ сервисов")
+button1 = tk.Button(root,text="Сервис1", command=button1_click,
+                   width=30,
+                   height=4).pack
+
+button2=tk.Button(root,text="Сервис2", command=button2_click,
+                 width=30,
+                 height=4).pack
+# Размещаем кнопку в окне
+button1.pack(pady=20)
+button2.pack(pady=20)
+
+# метка для отображения текста
+label = tk.Label(root, text="")
+label.pack()
+
+root.mainloop()
